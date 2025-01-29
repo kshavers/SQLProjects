@@ -29,42 +29,42 @@ VALUES
 Query SQL
 SELECT * FROM superstore
 ORDER by (price) desc;
-Description: This query fetches all records from the superstore table and sorts them in descending order based on the price column.
-Importance: Helps identify the most expensive products first, which is useful for pricing analysis, promotions, or understanding premium product categories.
+--Description: This query fetches all records from the superstore table and sorts them in descending order based on the price column.
+--Importance: Helps identify the most expensive products first, which is useful for pricing analysis, promotions, or understanding premium product categories.
 
 SELECT * FROM superstore
 ORDER by (stock_quantity) desc;
-Description: This query retrieves all records and sorts them in descending order based on stock_quantity, showing items with the highest stock first.
-Importance: Useful for inventory management by identifying overstocked or popular items that need restocking.
+--Description: This query retrieves all records and sorts them in descending order based on stock_quantity, showing items with the highest stock first.
+--Importance: Useful for inventory management by identifying overstocked or popular items that need restocking.
 
 SELECT SUM (stock_quantity)
 FROM superstore;
-Description: This query sums up the stock_quantity column to return the total number of items available in stock.
-Importance: Helps in inventory tracking and ensures there is enough stock to meet demand.
+--Description: This query sums up the stock_quantity column to return the total number of items available in stock.
+--Importance: Helps in inventory tracking and ensures there is enough stock to meet demand.
 
 SELECT AVG (average_rating)
 FROM superstore;
-Description: This query calculates the average value of the average_rating column, giving insight into the overall customer rating of products.
-Importance: Provides a quick assessment of customer satisfaction and product quality across the store.
+--Description: This query calculates the average value of the average_rating column, giving insight into the overall customer rating of products.
+--Importance: Provides a quick assessment of customer satisfaction and product quality across the store.
 
 SELECT AVG (price)
 FROM superstore;
-Description: This query returns the average price of all items in the superstore table.
-Importance: Useful for pricing strategy and benchmarking against competitors to ensure competitive pricing.
+--Description: This query returns the average price of all items in the superstore table.
+--Importance: Useful for pricing strategy and benchmarking against competitors to ensure competitive pricing.
 
 SELECT * FROM superstore
 ORDER by (average_rating) desc;
-Description: This query fetches all products and sorts them in descending order by average_rating, prioritizing the highest-rated items.
-Importance: Helps highlight best-reviewed products for promotions or featured listings.
+--Description: This query fetches all products and sorts them in descending order by average_rating, prioritizing the highest-rated items.
+--Importance: Helps highlight best-reviewed products for promotions or featured listings.
 
 SELECT * FROM superstore WHERE (average_rating) > 4.5
 ORDER by (average_rating) desc;
-Description: This query filters out products with an average_rating greater than 4.5 and sorts them in descending order.
-Importance: Helps identify top-rated products that may be promoted or recommended to customers.
+--Description: This query filters out products with an average_rating greater than 4.5 and sorts them in descending order.
+--Importance: Helps identify top-rated products that may be promoted or recommended to customers.
 
 SELECT * FROM superstore WHERE (average_rating) < 4.5
 ORDER by (average_rating) desc;
-Description: This query filters out products with an average_rating below 4.5 and sorts them in descending order.
-Importance: Useful for identifying products that may need improvement, better marketing, or potential discontinuation.
+--Description: This query filters out products with an average_rating below 4.5 and sorts them in descending order.
+--Importance: Useful for identifying products that may need improvement, better marketing, or potential discontinuation.
 
 
