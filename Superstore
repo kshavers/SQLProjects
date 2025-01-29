@@ -1,0 +1,70 @@
+Schema SQL
+CREATE TABLE superstore (
+    item_id INTEGER PRIMARY KEY,
+    item_name TEXT,
+    category TEXT,
+    price DECIMAL(10, 2),
+    stock_quantity INTEGER,
+    average_rating DECIMAL(3, 2)
+);
+
+INSERT INTO superstore (item_id, item_name, category, price, stock_quantity, average_rating)
+VALUES
+    (1, 'Stainless Steel Cookware Set', 'Kitchen Supplies', 89.99, 50, 4.6),
+    (2, 'Memory Foam Mattress', 'Furnishings', 499.99, 30, 4.8),
+    (3, 'Smart LED TV', 'Electronics', 549.00, 20, 4.5),
+    (4, 'Robot Vacuum Cleaner', 'Appliances', 199.50, 40, 4.3),
+    (5, 'Wireless Bluetooth Speaker', 'Electronics', 39.99, 60, 4.2),
+    (6, 'Non-Stick Baking Set', 'Kitchen Supplies', 29.95, 80, 4.4),
+    (7, 'Cotton Bedding Set', 'Furnishings', 89.00, 25, 4.7),
+    (8, 'Smart Home Security Camera', 'Electronics', 79.95, 15, 4.1),
+    (9, 'Air Purifier', 'Appliances', 129.50, 35, 4.6),
+    (10, 'Premium Coffee Maker', 'Kitchen Supplies', 79.99, 50, 4.9),
+    (11, 'Ergonomic Office Chair', 'Furnishings', 189.00, 20, 4.5),
+    (12, 'Wireless Earbuds', 'Electronics', 49.99, 75, 4.3),
+    (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
+    (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
+    (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+Query SQL
+SELECT * FROM superstore
+ORDER by (price) desc;
+Description: This query fetches all records from the superstore table and sorts them in descending order based on the price column.
+Importance: Helps identify the most expensive products first, which is useful for pricing analysis, promotions, or understanding premium product categories.
+
+SELECT * FROM superstore
+ORDER by (stock_quantity) desc;
+Description: This query retrieves all records and sorts them in descending order based on stock_quantity, showing items with the highest stock first.
+Importance: Useful for inventory management by identifying overstocked or popular items that need restocking.
+
+SELECT SUM (stock_quantity)
+FROM superstore;
+Description: This query sums up the stock_quantity column to return the total number of items available in stock.
+Importance: Helps in inventory tracking and ensures there is enough stock to meet demand.
+
+SELECT AVG (average_rating)
+FROM superstore;
+Description: This query calculates the average value of the average_rating column, giving insight into the overall customer rating of products.
+Importance: Provides a quick assessment of customer satisfaction and product quality across the store.
+
+SELECT AVG (price)
+FROM superstore;
+Description: This query returns the average price of all items in the superstore table.
+Importance: Useful for pricing strategy and benchmarking against competitors to ensure competitive pricing.
+
+SELECT * FROM superstore
+ORDER by (average_rating) desc;
+Description: This query fetches all products and sorts them in descending order by average_rating, prioritizing the highest-rated items.
+Importance: Helps highlight best-reviewed products for promotions or featured listings.
+
+SELECT * FROM superstore WHERE (average_rating) > 4.5
+ORDER by (average_rating) desc;
+Description: This query filters out products with an average_rating greater than 4.5 and sorts them in descending order.
+Importance: Helps identify top-rated products that may be promoted or recommended to customers.
+
+SELECT * FROM superstore WHERE (average_rating) < 4.5
+ORDER by (average_rating) desc;
+Description: This query filters out products with an average_rating below 4.5 and sorts them in descending order.
+Importance: Useful for identifying products that may need improvement, better marketing, or potential discontinuation.
+
+
